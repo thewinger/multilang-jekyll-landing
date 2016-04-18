@@ -1,5 +1,5 @@
 // Require all the things
-var   gulp = require('gulp'),
+var     gulp = require('gulp'),
         browserSync = require('browser-sync').create(),
         sass = require('gulp-ruby-sass'),
         sourcemaps = require('gulp-sourcemaps'),
@@ -12,39 +12,31 @@ var   gulp = require('gulp'),
         include = require('gulp-include'),
         notify = require('gulp-notify'),
         del = require('del'),
+        plumber = require('gulp-plumber'),
         gutil = require('gulp-util'),
         imagemin = require('gulp-imagemin'),
         newer = require('gulp-newer'),
         cp = require('child_process');
+
 // Asset paths
 var     base_path = './',
         src = base_path + '_dev/src',
         dist = base_path + 'assets', 
         paths = {
             js: src + '/js/*.js',
-            sass: src + '/sass/main.scss',
+            sass: src + '/sass/**/*.scss',
             img: src + 'img/*',
-            jekyll: ['index.html', '_posts/*', '_layouts/*', '_includes/*', '_assets/*','_assets/**/*', '_data/*']
+            jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', '_assets/*','_assets/**/*', '_data/*']
         };
 
 
-// Task: Static server with Browser Sync
-gulp.task('browser-sync', ['sass'], function(gulpCallback) {
-    browserSync.init({
-        server: {
-            baseDir: "_site"
-        },
-        // Open the site in Chrome
-        browser: "google chrome",
-        ghostmode: false
-    }, function callback() {
-        gulp.watch('_site').on('change', browserSync.reload);
-        gulpCallback();
-        });
-});
+var messages = {
+    jekyillBuild: '<span style="color: grey">Running</span> $ jekyll build'
+};
 
 // Rebuild jekyll
-gulp.task('build-jekyll', function(code) { 
+gulp.task('jekyll-build', function(code) { 
+    browserSync.notify(messages.jekyllBuild);
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
         .on('error', function(error) {
             gutil.log(gutil.colors.red(error.message));
@@ -52,13 +44,26 @@ gulp.task('build-jekyll', function(code) {
         on('close', code); 
 });
 
+gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
+    browserSync.reload();
+});
 
+// Task: Static server with Browser Sync
+gulp.task('browser-sync', ['jekyll-build'], function() {
+    browserSync.init({
+        server: {
+            baseDir: "_site"
+        },
+        // Open the site in Chrome
+        browser: "google'chrome",
+        ghostmode: false
+    });
+});
+            
 // TASK: Compile Sass
 gulp.task('sass', function() {
-    return sass(paths.sass, { sourcemap: true, style: 'compact' })
-        .on('error', function (err) {
-            console.error('Error!', err.message);
-         })
+    return sass(src + '/sass/main.scss', { sourcemap: true, style: 'expanded' })
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(autoprefixer(['last 4 version'], {cascade: true}))
         .pipe(sourcemaps.write('.'))
@@ -90,10 +95,10 @@ gulp.task('images', function() {
 
 // TASK: Watch for changes
 gulp.task('watch', function() {
-    gulp.watch(paths.jekyll, ['build-jekyll']);
+    gulp.watch(paths.jekyll, ['jekyll-rebuild']);
     gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.js, ['scripts']);
     gulp.watch(paths.img, ['images']);
 });
 
-gulp.task('default', ['browser-sync', 'build-jekyll', 'sass', 'scripts', 'images', 'watch']);
+gulp.task('default', ['browser-sync', 'sass', 'scripts', 'images', 'watch']); 

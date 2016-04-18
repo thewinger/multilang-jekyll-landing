@@ -19,6 +19,7 @@
     "gulp-include": "2.x.x",
     "gulp-newer": "1.x.x",
     "gulp-notify": "2.x.x",
+    "gulp-plumber": "^1.1.0",
     "gulp-rename": "1.x.x",
     "gulp-ruby-sass": "2.x.x",
     "gulp-sourcemaps": "1.x.x",
