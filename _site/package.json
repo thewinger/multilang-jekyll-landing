@@ -1,0 +1,28 @@
+{
+  "name": "Winproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alejandro Camara",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.x.x",
+    "del": "2.x.x",
+    "gulp": "3.x.x",
+    "gulp-autoprefixer": "3.x.x",
+    "gulp-concat": "2.x.x",
+    "gulp-cssnano": "2.x.x",
+    "gulp-imagemin": "2.x.x",
+    "gulp-include": "2.x.x",
+    "gulp-newer": "1.x.x",
+    "gulp-notify": "2.x.x",
+    "gulp-rename": "1.x.x",
+    "gulp-ruby-sass": "2.x.x",
+    "gulp-sourcemaps": "1.x.x",
+    "gulp-uglify": "1.x.x",
+    "gulp-uncss": "1.x.x"
+  }
+}
