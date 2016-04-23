@@ -1,0 +1,19 @@
+<header>
+    <div class="c-contact-info">
+        <p>tlf</p>
+        <p>mobile</p>
+        <p>email</p>
+    </div> <!-- contact-info -->
+
+    <h1><a href="{{ site.baseurl }}"><img src="assets/logo.png"></a></h1>
+
+    <nav>
+        <ul>
+            {% for node in site.posts reverse %}
+            {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
+            <li><a href="#{{id}}"><{{node.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+

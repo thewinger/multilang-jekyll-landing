@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+
+    <body>
+        {% include header.html %}
+        <main>
+        
+            {% for page in site.posts reversed %}
+            {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
+            <section id="{{id}}">
+                <div class="o-wrapper {{page.style}}">
+                    {{ page.content }}
+                </div>
+            </section>
+            {% endfor %}
+
+        </main>
+        {% include footer.html %}
+    </body>
+</html>
