@@ -5,15 +5,13 @@
         <p>email</p>
     </div> <!-- contact-info -->
 
-    <h1><a href="{{ site.baseurl }}"><img src="assets/logo.png"></a></h1>
-
-    <nav>
-        <ul>
-            {% for node in site.posts reverse %}
-            {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-            <li><a href="#{{id}}"><{{node.title}}</a></li>
-            {% endfor %}
-        </ul>
-    </nav>
-
-
+    <div class="c-navigation">
+        <h1><a href="{{ site.baseurl }}"><img src="assets/logo.png"></a></h1>
+    <nav><ul>
+      {% for post in site.posts reversed %}
+        <li class="p-{{post.filename}}"><a href="#{{post.filename}}">{{post.title}}</a></li>
+      {% endfor %}
+    </ul></nav>
+    </div> <!-- navigation -->
+</header>
+        

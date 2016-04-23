@@ -3,19 +3,21 @@
     {% include head.html %}
 
     <body>
+
         {% include header.html %}
+
         <main>
         
-            {% for page in site.posts reversed %}
-            {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
-            <section id="{{id}}">
-                <div class="o-wrapper {{page.style}}">
-                    {{ page.content }}
-                </div>
+          {% for post in site.posts reversed %}
+            <section id="{{post.filename}}">
+              <div class="o-wrapper">
+                {{ post.content }}
+              </div>
             </section>
-            {% endfor %}
+          {% endfor %}
 
         </main>
+
         {% include footer.html %}
     </body>
 </html>
