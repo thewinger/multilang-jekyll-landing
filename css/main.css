@@ -66,7 +66,6 @@
  *
  * github.com/inuitcss | inuitcss.com
  */
-/*@import "settings";*/
 /*------------------------------------*\
     #GENERIC
 \*------------------------------------*/
@@ -676,7 +675,7 @@ html {
   line-height: 1.5;
   /* [1] */
   background-color: #fff;
-  color: #333;
+  color: #39403e;
   overflow-y: scroll;
   /* [2] */
   min-height: 100%;
