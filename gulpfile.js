@@ -64,10 +64,11 @@ gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
 gulp.task('sass', function() {
     return sass(src + '/sass/main.scss', { sourcemap: true, style: 'expanded' })
         .pipe(plumber())
-        .pipe(sourcemaps.init())
+        .pipe(sourcemaps))nit())
         .pipe(autoprefixer(['last 4 version'], {cascade: true}))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dist + '/css'))
+        .pipe(gulp.dest(site + '/css'))
         .pipe(browserSync.stream({match: '**/*.css'}))
         .pipe(notify({ message: 'Sass task completed' }));
 });
@@ -81,6 +82,7 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest(dist + '/js'))
         .pipe(uglify().on('error', gutil.log))
         .pipe(gulp.dest(dist + '/js'))
+        .pipe(gulp.dest(site + '/js'))
         .pipe(browserSync.stream())
         .pipe(notify({ message: 'Scripts task completed' }));
 });
@@ -91,6 +93,7 @@ gulp.task('images', function() {
         .pipe(newer(dist +'/img'))
         .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
         .pipe(gulp.dest(dist +'/img'))
+        .pipe(gulp.dest(site +'/img'))
         .pipe(notify({ message: 'Images task completed' }));
 });
 
