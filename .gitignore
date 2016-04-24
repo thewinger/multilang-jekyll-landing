@@ -13,3 +13,8 @@ node_modules/**
 # DS_Store #
 ############
 .DS_Store
+
+# JEKYLL #
+_site/
+.sass-cache/
+.jekyll-metadata
