@@ -64,7 +64,7 @@ gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
 gulp.task('sass', function() {
     return sass(src + '/sass/main.scss', { sourcemap: true, style: 'expanded' })
         .pipe(plumber())
-        .pipe(sourcemaps))nit())
+        .pipe(sourcemaps.init())
         .pipe(autoprefixer(['last 4 version'], {cascade: true}))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dist + '/css'))
