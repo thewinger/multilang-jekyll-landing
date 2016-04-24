@@ -8,11 +8,12 @@
     <div class="c-language">
       <ul>
         {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
-        {% assign pages-other-lang = (pages | where:"lang" != page.lang) %}
-        {% for page in pages-other-lang %}
-        <li>
-          <a href="{{page.url}}" class="{{ page.lang }}">{{ page.lang }}</a>
-        </li>
+        {% for pagina in pages %}
+          {% unless pagina.lang == page.lang %}
+          <li>
+            <a href="{{pagina.url}}" class="{{ pagina.lang }}">{{ pagina.lang }}</a>
+          </li>
+          {% endunless %}
         {% endfor %}
       </ul>
     </div> <!-- language -->
