@@ -8,6 +8,4 @@ exclude: ["_dev",
          ".gitignore",
          "gulpfile.js",
          "node_modules",
-         "package.json",
-         "assets"]
-keep_files: ["assets/css", "assets/js", "assets/img"]
+         "package.json"]

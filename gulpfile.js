@@ -21,13 +21,13 @@ var     gulp = require('gulp'),
 // Asset paths
 var     base_path = './',
         src = base_path + '_dev/src',
-        dist = base_path + 'assets', 
+        dist = base_path, 
         site = base_path + '_site',
         paths = {
             js: src + '/js/*.js',
             sass: src + '/sass/**/*.scss',
             img: src + 'img/*',
-            jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', '_assets/*','_assets/**/*', '_data/*']
+            jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', '_data/*']
         };
 
 
