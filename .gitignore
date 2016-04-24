@@ -15,6 +15,13 @@ node_modules/**
 .DS_Store
 
 # JEKYLL #
+##########
 _site/
 .sass-cache/
 .jekyll-metadata
+
+# SWP #
+#######
+*.swp
+
+
