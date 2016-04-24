@@ -8,7 +8,8 @@
     <div class="c-language">
       <ul>
         {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
-        {% for page in pages reversed %}
+        {% assign pages-other-lang = (pages | where:"lang" != page.lang) %}
+        {% for page in pages-other-lang %}
         <li>
           <a href="{{page.url}}" class="{{ page.lang }}">{{ page.lang }}</a>
         </li>
