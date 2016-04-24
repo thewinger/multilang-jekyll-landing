@@ -1,0 +1,9 @@
+es:
+  index:
+  description: Descripción de la web en español
+  keywords: abogados, valencia, español
+en: 
+  index: index-en.html
+  description: Website's description in english
+  keywords: lawyers, valencia, english 
+

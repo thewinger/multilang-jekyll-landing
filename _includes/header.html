@@ -6,14 +6,22 @@
     </div> <!-- contact-info -->
 
     <div class="c-language">
-      <a href="/en/">English</a>
+      <ul>
+        {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
+        {% for page in pages %}
+        <li>
+          <a href="{{page.url}}" class="{{ page.lang }}">{{ page.lang }}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </div> <!-- language -->
 
     <div class="c-navigation">
         <h1><a href="{{ site.baseurl }}"><img src="assets/logo.png"></a></h1>
     <nav><ul>
-      {% for post in site.posts reversed %}
-        <li class="p-{{post.filename}}"><a href="#{{post.filename}}">{{post.title}}</a></li>
+      {% assign posts=site.posts | where:"lang",page.lang %}
+      {% for post in posts reversed %}
+        <li class="p-{{post.ref}}"><a href="#{{post.ref}}">{{post.title}}</a></li>
       {% endfor %}
     </ul></nav>
     </div> <!-- navigation -->

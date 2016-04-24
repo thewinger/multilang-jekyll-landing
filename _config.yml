@@ -1,9 +1,7 @@
 # Site settings
 title: AMontero Abogados
 email: info@amonteroabogados.com
-description: Description of website
-keywords: abogados, valencia, etc
-baseurl: "/"
+baseurl: ""
 url: "http://localhost:3000"
 exclude: ["_dev",
          ".git",
