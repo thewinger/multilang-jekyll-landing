@@ -1,22 +1,19 @@
 <header>
     <div class="c-contact-info">
-        <p>tlf</p>
-        <p>mobile</p>
-        <p>email</p>
-    </div> <!-- contact-info -->
-
-    <div class="c-language">
-      <ul>
-        {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
-        {% for pagina in pages %}
-          {% unless pagina.lang == page.lang %}
-          <li>
+      <ul class="list-inline">
+        <li><a href="tel:{{ site.data.contact-info.telephone }}" class="icon-text"><span class="icon-text__icon i-telephone"></span>{{ site.data.contact-info.telephone }}</a></li>
+        <li><a href="tel:{{ site.data.contact-info.mobile }}" class="icon-text"><span class="icon-text__icon i-mobile"></span>{{ site.data.contact-info.mobile }}</a></li>
+        <li><a href="tel:{{ site.data.contact-info.email }}" class="icon-text"><span class="icon-text__icon i-email"></span>{{ site.data.contact-info.email }}</a></li>
+        <li>
+          {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
+          {% for pagina in pages %}
+            {% unless pagina.lang == page.lang %}
             <a href="{{pagina.url}}" class="{{ pagina.lang }}">{{ pagina.lang }}</a>
-          </li>
-          {% endunless %}
-        {% endfor %}
+            {% endunless %}
+          {% endfor %}
+        </li>
       </ul>
-    </div> <!-- language -->
+    </div> <!-- contact-info -->
 
     <div class="c-navigation">
         <h1><a href="{{ site.baseurl }}"><img src="img/logo.png"></a></h1>
@@ -27,5 +24,17 @@
       {% endfor %}
     </ul></nav>
     </div> <!-- navigation -->
+    
+    {% assign posts=site.posts | where:"lang",page.lang %}
+    {% for post in posts %}
+      {% if post.title == 'Quienes Somos' or post.title == 'Who We Are' %}
+      <section id="{{post.filename}}">
+        <div class="o-wrapper">
+          {{ post.content }}
+        </div>
+      </section>
+      {% endif %}
+    {% endfor %}
+      
 </header>
         

@@ -1,0 +1,6 @@
+.c-contact-info {
+  li {
+    padding: $inuit-base-spacing-unit--small;
+    @include inuit-font-size(14px);
+  }
+}

@@ -10,11 +10,13 @@
         
           {% assign posts=site.posts | where:"lang",page.lang %}
           {% for post in posts reversed %}
+            {% unless post.title == 'Quienes Somos' or post.title == 'Who We Are' %}
             <section id="{{post.filename}}">
               <div class="o-wrapper">
                 {{ post.content }}
               </div>
             </section>
+            {% endunless %}
           {% endfor %}
 
         </main>

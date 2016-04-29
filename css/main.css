@@ -1060,8 +1060,74 @@ html {
 }
 
 /*------------------------------------*\
+    $ICON-TEXT
+\*------------------------------------*/
+/**
+ * For text-links etc that have an icon with them. Sometimes whitespace would
+ * suffice in creating a gap between the icon and text, for example:
+ *
+   <a href=#>
+       <i class="s  s--help"></i> Help &amp; support
+   </a>
+ *
+ * However we will sometimes want a larger, explicity set gap:
+   <a href=# class=icon-text>
+       <i class="icon-text__icon  s  s--help"></i>Help &amp; support
+   </a>
+ *
+ * Demo: jsfiddle.net/inuitcss/Q6Lbf
+ *
+ */
+.icon-text > .icon-text__icon {
+  margin-right: 4px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/**
+ * We can also reverse the direction of the margin for icons that appear to the
+ * right of the text content, thus:
+ *
+   <a href=# class=icon-text--rev>
+       Help &amp; support<i class="icon-text__icon  s  s--help"></i>
+   </a>
+ *
+ */
+.icon-text--rev > .icon-text__icon {
+  margin-left: 6px;
+}
+
+.i-telephone {
+  background-image: url("/img/i-telephone.png");
+}
+
+.i-mobile {
+  background-image: url("/img/i-mobile.png");
+}
+
+.i-email {
+  background-image: url("/img/i-email.png");
+}
+
+/*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
+header {
+  background: url("/img/header-bg.png") no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.c-contact-info li {
+  padding: 12px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+
 /*------------------------------------*\
     #THEME
 \*------------------------------------*/
