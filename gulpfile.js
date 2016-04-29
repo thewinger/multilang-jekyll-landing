@@ -26,7 +26,7 @@ var     base_path = './',
         paths = {
             js: src + '/js/*.js',
             sass: src + '/sass/**/*.scss',
-            img: src + 'assets/*',
+            img: src + '/assets/*',
             jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', '_data/*']
         };
 
