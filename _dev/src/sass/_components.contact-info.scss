@@ -1,6 +1,8 @@
 .c-contact-info {
+  background-color: rgba($inuit-base-text-color, 0.3);
   li {
     padding: $inuit-base-spacing-unit--small;
     @include inuit-font-size(14px);
+    text-align: center;
   }
 }

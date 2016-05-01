@@ -2,4 +2,18 @@ header {
   background: url('/img/header-bg.png') no-repeat;
   background-size: cover;
   color: #fff;
+  li {
+    padding: $inuit-base-spacing-unit--small;
+    @include inuit-font-size(14px);
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: $inuit-brand-color;
+    }
+  }
+}
+.en:lang(es), .es:lang(en) {
+  text-transform: uppercase;
 }

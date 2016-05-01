@@ -1120,12 +1120,33 @@ header {
   background-size: cover;
   color: #fff;
 }
+header li {
+  padding: 12px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+header a:hover {
+  color: #16A085;
+}
 
+.en:lang(es), .es:lang(en) {
+  text-transform: uppercase;
+}
+
+.c-contact-info {
+  background-color: rgba(57, 64, 62, 0.3);
+}
 .c-contact-info li {
   padding: 12px;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
+  text-align: center;
 }
 
 /*------------------------------------*\
@@ -1589,6 +1610,17 @@ header {
   .u-4\/5-retina {
     width: 80% !important;
   }
+}
+.text--left {
+  text-align: left !important;
+}
+
+.text--center {
+  text-align: center !important;
+}
+
+.text--right {
+  text-align: right !important;
 }
 
 
