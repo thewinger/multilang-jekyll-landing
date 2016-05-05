@@ -17,7 +17,7 @@
 
     <div class="c-navigation">
       <h1 class="logo u-3/5"><a href="{{ site.url }}/{{ site.index[page.lang] }}"><img src="{{ site.url }}/img/logo.png"></a></h1><!--
-      --><button class="js-menu-toggle u-2/5 icon-text icon-text--rev">MENU<span class="icon-text__icon i-menu"></span></button>
+      --><button id="js-menu-toggle" class="menu-toggle u-2/5 icon-text icon-text--rev">MENU<span class="icon-text__icon i-menu"></span></button>
     <nav>
       <ul class="list-ui list-ui--small">
       {% assign posts=site.posts | where:"lang",page.lang %}

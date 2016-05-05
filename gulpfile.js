@@ -76,7 +76,7 @@ gulp.task('sass', function() {
 
 // TASK: Concatenate & Minify JS Files
 gulp.task('scripts', function() {
-    return gulp.src(paths.js)
+    return gulp.src(src + '/js/main.js')
         .pipe(include())
         .on('error', console.log)
         .pipe(gulp.dest(dist + '/js'))

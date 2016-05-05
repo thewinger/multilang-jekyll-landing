@@ -2,14 +2,15 @@
   background-color: #fff;
   text-align: center;
 }
-.logo, .js-menu-toggle {
+.logo, .menu-toggle {
   display: inline-block;
   color: $inuit-base-text-color;
   margin-bottom: 0;
 }
-.js-menu-toggle {
+.menu-toggle {
   background: none;
   border: none;
+  outline: none;
   span {
     margin: -4px 0 0 4px;
   }

@@ -1188,18 +1188,23 @@ header a:hover {
   text-align: center;
 }
 
-.logo, .js-menu-toggle {
+.logo, .menu-toggle {
   display: inline-block;
   color: #39403e;
   margin-bottom: 0;
 }
 
-.js-menu-toggle {
+.menu-toggle {
   background: none;
   border: none;
+  outline: none;
 }
-.js-menu-toggle span {
+.menu-toggle span {
   margin: -4px 0 0 4px;
+}
+
+.js nav {
+  display: none;
 }
 
 /*------------------------------------*\
