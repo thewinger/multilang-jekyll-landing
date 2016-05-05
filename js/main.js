@@ -1,0 +1,1 @@
+window.addEventListener("load",function(){var n=document.querySelectorAll(".c-navigation nav");console.log(n)});

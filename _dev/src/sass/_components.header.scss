@@ -7,7 +7,7 @@ header {
     @include inuit-font-size(14px);
   }
   a {
-    color: #fff;
+    color: $inuit-brand-color;
     text-decoration: none;
     &:hover {
       color: $inuit-brand-color;
@@ -17,3 +17,4 @@ header {
 .en:lang(es), .es:lang(en) {
   text-transform: uppercase;
 }
+

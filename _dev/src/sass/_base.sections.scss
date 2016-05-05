@@ -1,0 +1,6 @@
+section {
+  padding: ($inuit-base-spacing-unit*2.5) $inuit-base-spacing-unit--small;
+  h2 {
+    @include inuit-font-size(24px, 1.2);
+  }
+}

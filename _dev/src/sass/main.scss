@@ -123,11 +123,13 @@
 \*------------------------------------*/
 
 @import "base.headings";
+@import "base.page";
 @import "bower_components/inuit-headings/base.headings";
 @import "bower_components/inuit-paragraphs/base.paragraphs";
 @import "bower_components/inuit-lists/base.lists";
 @import "bower_components/inuit-images/base.images";
 @import "bower_components/inuit-page/base.page";
+@import "base.sections";
 
 
 
@@ -145,6 +147,8 @@
 @import "bower_components/inuit-list-bare/objects.list-bare";
 @import "bower_components/inuit-list-block/objects.list-block";
 @import "bower_components/inuit-list-inline/objects.list-inline";
+$inuit-list-ui-border-color: $inuit-gray-brand-color;
+$inuit-enable-list-ui--small: true;
 @import "bower_components/inuit-list-ui/objects.list-ui";
 @import "bower_components/inuit-media/objects.media";
 @import "bower_components/inuit-pack/objects.pack";
@@ -162,6 +166,7 @@
 // > Components here <
 @import "components.header";
 @import "components.contact-info";
+@import "components.navigation";
 
 
 /*------------------------------------*\

@@ -556,6 +556,15 @@ ul, ol, dd {
 \*------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+main h2 {
+  color: #16A085;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
 }
 
 /*------------------------------------*\
@@ -692,6 +701,15 @@ html {
   /* [5] */
   -webkit-font-smoothing: antialiased;
   /* [5] */
+}
+
+section {
+  padding: 60px 12px;
+}
+section h2 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
 /*------------------------------------*\
@@ -944,7 +962,7 @@ html {
 .list-ui,
 .list-ui__item,
 .list-ui > li {
-  border: 0 solid #ccc;
+  border: 0 solid #e9f2f1;
 }
 
 .list-ui {
@@ -958,6 +976,14 @@ html {
 .list-ui > li {
   padding: 24px;
   border-bottom-width: 1px;
+}
+
+/**
+ * Small list-uis.
+ */
+.list-ui--small > .list-ui__item,
+.list-ui.list-ui--small > li {
+  padding: 12px;
 }
 
 /*------------------------------------*\
@@ -1112,6 +1138,14 @@ html {
   background-image: url("/img/i-email.png");
 }
 
+.i-flag {
+  background-image: url("/img/i-flag.png");
+}
+
+.i-menu {
+  background-image: url("/img/i-menu.png");
+}
+
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
@@ -1127,7 +1161,7 @@ header li {
   line-height: 1.71429;
 }
 header a {
-  color: #fff;
+  color: #16A085;
   text-decoration: none;
 }
 header a:hover {
@@ -1139,7 +1173,7 @@ header a:hover {
 }
 
 .c-contact-info {
-  background-color: rgba(57, 64, 62, 0.3);
+  background-color: #e9f2f1;
 }
 .c-contact-info li {
   padding: 12px;
@@ -1147,6 +1181,25 @@ header a:hover {
   font-size: 0.875rem;
   line-height: 1.71429;
   text-align: center;
+}
+
+.c-navigation {
+  background-color: #fff;
+  text-align: center;
+}
+
+.logo, .js-menu-toggle {
+  display: inline-block;
+  color: #39403e;
+  margin-bottom: 0;
+}
+
+.js-menu-toggle {
+  background: none;
+  border: none;
+}
+.js-menu-toggle span {
+  margin: -4px 0 0 4px;
 }
 
 /*------------------------------------*\

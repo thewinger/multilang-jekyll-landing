@@ -8,7 +8,7 @@
           {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
           {% for pagina in pages %}
             {% unless pagina.lang == page.lang %}
-            <a href="{{pagina.url}}" class="{{ pagina.lang }}">{{ pagina.lang }}</a>
+            <a href="{{pagina.url}}" class="{{ pagina.lang }} icon-text"><span class="icon-text__icon i-flag"></span>{{ pagina.lang }}</a>
             {% endunless %}
           {% endfor %}
         </li>
@@ -16,11 +16,13 @@
     </div> <!-- contact-info -->
 
     <div class="c-navigation">
-      <h1><a href="{{ site.baseurl }}/{{ site.index[page.lang] }}"><img src="img/logo.png"></a></h1>
-    <nav><ul>
+      <h1 class="logo u-3/5"><a href="{{ site.url }}/{{ site.index[page.lang] }}"><img src="{{ site.url }}/img/logo.png"></a></h1><!--
+      --><button class="js-menu-toggle u-2/5 icon-text icon-text--rev">MENU<span class="icon-text__icon i-menu"></span></button>
+    <nav>
+      <ul class="list-ui list-ui--small">
       {% assign posts=site.posts | where:"lang",page.lang %}
       {% for post in posts reversed %}
-        <li class="p-{{post.ref}}"><a href="#{{post.ref}}">{{post.title}}</a></li>
+        <li class="p-{{post.ref}} list-ui__item"><a href="#{{post.ref}}">{{post.title}}</a></li>
       {% endfor %}
     </ul></nav>
     </div> <!-- navigation -->
@@ -28,7 +30,7 @@
     {% assign posts=site.posts | where:"lang",page.lang %}
     {% for post in posts %}
       {% if post.title == 'Quienes Somos' or post.title == 'Who We Are' %}
-      <section id="{{post.filename}}">
+      <section id="{{post.ref}}">
         <div class="o-wrapper">
           {{ post.content }}
         </div>

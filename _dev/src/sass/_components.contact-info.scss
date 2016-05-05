@@ -1,5 +1,5 @@
 .c-contact-info {
-  background-color: rgba($inuit-base-text-color, 0.3);
+  background-color: $inuit-gray-brand-color; 
   li {
     padding: $inuit-base-spacing-unit--small;
     @include inuit-font-size(14px);
