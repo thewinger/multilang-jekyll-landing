@@ -9,3 +9,9 @@ exclude: ["_dev",
          "gulpfile.js",
          "node_modules",
          "package.json"]
+
+
+# Pages
+index:
+  en: "en/"
+  es: "index/"
