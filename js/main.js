@@ -19,28 +19,60 @@ a.get("prop")?c.style.opacity=b[f]:c.setAttribute(a.get("prop"),b[f])});d&&(c.st
 new Map,Y=function(){var a=0;return function(b){var c=a++;k=(new Map(k)).set(c,b);return c}}(),v=function(a){var b=O(a),c=Q(b),d=Y(b.get("el")),e=new Map;R(b);W(function g(a){if(k.has(d)){e.has("start")||e.set("start",a);e.set("elapsed",a-e.get("start"));a=e.get("elapsed")<b.get("duration");var h=c.map(a?T(b,e.get("elapsed")):U(b));k.get(d).forEach(V(c,h));a?requestAnimationFrame(g):(a=new Map(k),a["delete"](d),k=a,b.get("complete")&&b.get("complete")(b.get("el")),b.get("loop")&&X(b))}},b)};v.stop=
 function(a){var b=z(a),c=new Map(k);c.forEach(function(a,e){var f=x(a,b);f.length?c.set(e,f):c["delete"](e)});k=c};return v}();"undefined"!=typeof module&&module.exports&&(module.exports=animate);
 
+// HELPER FUNCTIONS
+var containsClass = function(element, className) {
+  return (" " + element.className + " ").indexOf(" " + className + " ") > -1;
+};
+var addClass = function(element, className) {
+  return containsClass(element, className) ? false : (element.className += " " + className);
+};
+var removeClass = function(element, className) {
+  return element.className = (" " + element.className + " ").replace(" " + className + " ", " ");
+};
+var toggleClass = function(element, className) {
+  return (containsClass(element, className) ? removeClass : addClass)(element, className);
+};
+
+
+
 document.documentElement.classList.add('js');
 
 window.addEventListener('load', function() {
-  var nav = document.querySelectorAll('.c-navigation nav'); 
-  var button = document.getElementById('js-menu-toggle');
-  button.classList.add('menu-hide');
-  button.addEventListener('click', toggle-menu, false);
-  button.addEventListener('touchstart', toggle-menu, false);
+// MENU-TOGGLE
+var nav = document.querySelectorAll('.c-navigation nav'); 
+var button = document.getElementById('js-menu-toggle');
+button.classList.add('menu-hide');
+button.addEventListener('click', toggleMenu, false);
+//button.addEventListener('touchstart', toggleMenu, false);
 
-  function toggle-menu(e) {
-    console.log('tocado');
-    if (!check('menu-hide')) {
-      console.log('se muestra');
-      button.classList.add('menu-hide');
-    } else {
-      console.log('no se muestra');
-      button.classList.remove('menu-hide');
-    }
+function toggleMenu() {
+  if (!containsClass(button, 'menu-hide')) {
+    console.log('se esconde');
+    toggleClass(button,'menu-hide');
+    animate({
+      el: nav,
+      opacity: [1, 0],
+      easing: "easeInOutCubic",
+      begin: hide
+    });
+  } else {
+    console.log('se muestra');
+    toggleClass(button, 'menu-hide');
+    animate({
+      el: nav,
+      opacity: [0, 1],
+      easing: "easeInOutCubic",
+      begin: show
+    });
+  } 
+  function show(elements) {
+    elements.forEach(function(el) { el.style.display = "block"; }); 
   }
+  function hide(elements) {
+    elements.forEach(function(el) { el.style.display = "none"; });
+  }
+};
 
-  function check(cssClass) {
-    // Returns true when it exists
-    return (' ' + button.className + ' ').indexOf(cssClass) != -1;
-  }
+
+
 });
