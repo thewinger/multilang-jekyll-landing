@@ -6,7 +6,7 @@
     <title>{{ site.title }} | {{ page.lang | upcase }}</title>
     <meta name="description" content="{{site.data.translations[page.lang].description}}">
     <meta name="keywords" content="{{ site.data.translations[page.lang].keywords }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}{% for page in pages %}
   <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />{% endfor %}
 

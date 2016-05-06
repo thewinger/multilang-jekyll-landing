@@ -1149,6 +1149,23 @@ section h2 {
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
+.alpha {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.hero-line {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.hero-line::after {
+  content: '';
+  display: block;
+  margin-top: 12px;
+  border: 1px solid #fff;
+  width: 72px;
+}
+
 header {
   background: url("/img/header-bg.png") no-repeat;
   background-size: cover;
@@ -1223,6 +1240,12 @@ header a:hover {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.c-card {
+  padding: 24px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
 }
 
 .js nav {

@@ -56,7 +56,7 @@ gulp.task('browser-sync', ['sass', 'scripts', 'jekyll-build'], function() {
             baseDir: "./_site"
         },
         // Open the site in Chrome
-        browser: "google chrome"
+        //browser: "google chrome"
     });
 });
             

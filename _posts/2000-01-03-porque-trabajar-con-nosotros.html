@@ -1,7 +1,13 @@
 ---
 title: Porqué trabajar con nosotros 
-ref: porque
+filename: porque
 lang: es
 ---
 
 <h2>{{ page.title }}</h2>
+<div class="c-card">
+  {% for motive in site.data.motives[page.lang] %}
+    <h1 class="c-card__title">{{ motive.title }}</h1>
+    <p class="c-card__body">{{ motive.description }}</p>
+  {% endfor %}
+</div>

@@ -1,7 +1,9 @@
 ---
 title: Quienes Somos
-ref: quienes
+filename: quienes
 lang: es
 ---
 
 <h2>{{ page.title }}</h2>
+<span class="hero-line alpha">{{ site.data.quienes[page.lang].hero }}</span>
+<p>{{ site.data.quienes[page.lang].text }}</p>
