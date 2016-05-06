@@ -1,0 +1,16 @@
+.alpha {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.hero-line {
+  display: inline-block;
+  margin-bottom: $inuit-base-spacing-unit;
+  &::after {
+    content: '';
+    display: block;
+    margin-top: $inuit-base-spacing-unit--small;
+    border: 1px solid #fff;
+    width: $inuit-base-spacing-unit * 3;
+  }
+}
