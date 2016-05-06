@@ -5,3 +5,17 @@ lang: es
 ---
 
 <h2>{{ page.title }}</h2>
+<form method="POST" id="form-contact">
+  <label for="name">{{ site.data.forms[page.lang].name }}</label>
+  <input type="text" name="name">
+  <label for="_replyto">{{ site.data.forms[page.lang].email }}</label>
+  <input type="email" name="_replyto">
+  <input type="hidden" name="_subject" value="Contacto desde la web" />
+  <label for="subject">{{ site.data.forms[page.lang].subject }} </label>
+  <input type="text" name="subject">
+  <label for="message">{{ site.data.forms[page.lang].message }}</label>
+  <textarea name="message" rows="5"></textarea>
+  <input type="text" name="_gotcha" style="display:none" />
+  <input type="submit" value="{{ site.data.forms[page.lang].name }}" class="btn">
+</form>
+

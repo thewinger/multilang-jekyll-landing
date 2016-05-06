@@ -7,7 +7,7 @@ lang: en
 <h2>{{ page.title }}</h2>
   {% for service in site.data.services[page.lang] %}
   <div class="c-card">
-    <h1 class="c-card__title">{{ service.title }}</h1>
+    <h1 class="c-card__title delta">{{ service.title }}</h1>
     <p class="c-card__body">{{ service.description }}</p>
   </div>
   {% endfor %}

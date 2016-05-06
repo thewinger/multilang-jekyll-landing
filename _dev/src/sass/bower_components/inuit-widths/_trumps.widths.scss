@@ -18,6 +18,7 @@ $inuit-widths-columns: (
     3,
     4,
     5,
+    6,
 ) !default;
 
 @include inuit-widths($inuit-widths-columns);

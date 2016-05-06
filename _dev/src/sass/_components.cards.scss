@@ -3,4 +3,24 @@
   box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.10), 0px 0px 0px 1px rgba(0,0,0,0.08);
   border-radius: 4px;
   margin-bottom: $inuit-base-spacing-unit;
+  .c-card__title {
+    font-weight: 400;
+    margin-bottom: $inuit-base-spacing-unit--small;
+  }
+  .c-card__body {
+    margin-bottom: 0; 
+  }
 } 
+
+.c-card--borderless {
+  box-shadow: none;
+  .c-card__title {
+    &::after {
+      content: '';
+      display: block;
+      width: $inuit-base-spacing-unit;
+      margin-top: $inuit-base-spacing-unit--tiny;
+      border: 1px solid $inuit-base-text-color;
+    }
+  }
+}

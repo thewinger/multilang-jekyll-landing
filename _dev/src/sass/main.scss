@@ -124,6 +124,7 @@
 
 @import "base.headings";
 @import "base.page";
+@import "base.anchors";
 @import "bower_components/inuit-headings/base.headings";
 @import "bower_components/inuit-paragraphs/base.paragraphs";
 @import "bower_components/inuit-lists/base.lists";
@@ -141,6 +142,8 @@
 
 @import "bower_components/inuit-block/objects.block";
 @import "bower_components/inuit-box/objects.box";
+$inuit-enable-btn--large: true;
+$inuit-btn-background: $inuit-brand-color;
 @import "bower_components/inuit-buttons/objects.buttons";
 @import "bower_components/inuit-flag/objects.flag";
 @import "bower_components/inuit-layout/objects.layout";
@@ -169,7 +172,7 @@ $inuit-enable-list-ui--small: true;
 @import "components.contact-info";
 @import "components.navigation";
 @import "components.cards";
-
+@import "components.inputs";
 @import "components.javascript";
 @import "components.states";
 

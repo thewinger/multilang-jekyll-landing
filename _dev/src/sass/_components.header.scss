@@ -6,13 +6,6 @@ header {
     padding: $inuit-base-spacing-unit--small;
     @include inuit-font-size(14px);
   }
-  a {
-    color: $inuit-brand-color;
-    text-decoration: none;
-    &:hover {
-      color: $inuit-brand-color;
-    }
-  }
 }
 .en:lang(es), .es:lang(en) {
   text-transform: uppercase;

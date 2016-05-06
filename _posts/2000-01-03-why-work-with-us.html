@@ -2,14 +2,12 @@
 title: Why Work With Us 
 filename: porque
 lang: en
-categories:
-  - en
 ---
 
 <h2>{{ page.title }}</h2>
-<div class="c-card">
-  {% for motive in site.data.motives[page.lang] %}
-    <h1 class="c-card__title">{{ motive.title }}</h1>
-    <p class="c-card__body">{{ motive.description }}</p>
-  {% endfor %}
+{% for motive in site.data.motives[page.lang] %}
+<div class="c-card c-card--borderless">
+  <h1 class="c-card__title delta">{{ motive.title }}</h1>
+  <p class="c-card__body">{{ motive.description }}</p>
 </div>
+{% endfor %}

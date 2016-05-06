@@ -1,0 +1,12 @@
+es:
+  name: Nombre
+  email: Correo Electrónico
+  subject: Asunto
+  message: Mensaje
+  send: Enviar
+en:
+  name: Name
+  email: Email
+  subject: Subject
+  message: Message
+  send: Send

@@ -567,6 +567,14 @@ html {
   font-family: "Open Sans", sans-serif;
 }
 
+a {
+  color: #16A085;
+  text-decoration: none;
+}
+a:hover {
+  color: #16A085;
+}
+
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
@@ -711,6 +719,9 @@ section h2 {
   font-size: 1.5rem;
   line-height: 1.2;
 }
+section:nth-child(even) {
+  background-color: #e9f2f1;
+}
 
 /*------------------------------------*\
     #OBJECTS
@@ -797,8 +808,8 @@ section h2 {
   /* [6] */
   padding: 11px 23px;
   /* [7] */
-  background-color: #4a8ec2;
-  border: 1px solid #4a8ec2;
+  background-color: #16A085;
+  border: 1px solid #16A085;
 }
 .btn, .btn:hover, .btn:active, .btn:focus {
   text-decoration: none;
@@ -812,6 +823,14 @@ section h2 {
 .btn::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+/**
+ * Large buttons.
+ */
+.btn--large {
+  padding: 23px 47px;
+  /* [7] */
 }
 
 /*------------------------------------*\
@@ -1146,6 +1165,10 @@ section h2 {
   background-image: url("/img/i-menu.png");
 }
 
+.i-pin {
+  background-image: url("/img/i-pin.png");
+}
+
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
@@ -1176,13 +1199,6 @@ header li {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
-}
-header a {
-  color: #16A085;
-  text-decoration: none;
-}
-header a:hover {
-  color: #16A085;
 }
 
 .en:lang(es), .es:lang(en) {
@@ -1246,6 +1262,43 @@ header a:hover {
   padding: 24px;
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
+  margin-bottom: 24px;
+}
+.c-card .c-card__title {
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.c-card .c-card__body {
+  margin-bottom: 0;
+}
+
+.c-card--borderless {
+  box-shadow: none;
+}
+.c-card--borderless .c-card__title::after {
+  content: '';
+  display: block;
+  width: 24px;
+  margin-top: 6px;
+  border: 1px solid #39403e;
+}
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+}
+
+label {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+
+input, textarea {
+  border: 1px solid #c9dfdd;
+  border-radius: 2px;
+  padding: 6px;
+  margin-bottom: 12px;
 }
 
 .js nav {
@@ -1442,6 +1495,26 @@ header a:hover {
 
 .u-4\/5 {
   width: 80% !important;
+}
+
+.u-1\/6 {
+  width: 16.66667% !important;
+}
+
+.u-2\/6 {
+  width: 33.33333% !important;
+}
+
+.u-3\/6 {
+  width: 50% !important;
+}
+
+.u-4\/6 {
+  width: 66.66667% !important;
+}
+
+.u-5\/6 {
+  width: 83.33333% !important;
 }
 
 /*------------------------------------*\
