@@ -1146,27 +1146,27 @@ section:nth-child(even) {
 }
 
 .i-telephone {
-  background-image: url("/img/i-telephone.png");
+  background-image: url("../img/i-telephone.png");
 }
 
 .i-mobile {
-  background-image: url("/img/i-mobile.png");
+  background-image: url("../img/i-mobile.png");
 }
 
 .i-email {
-  background-image: url("/img/i-email.png");
+  background-image: url("../img/i-email.png");
 }
 
 .i-flag {
-  background-image: url("/img/i-flag.png");
+  background-image: url("../img/i-flag.png");
 }
 
 .i-menu {
-  background-image: url("/img/i-menu.png");
+  background-image: url("../img/i-menu.png");
 }
 
 .i-pin {
-  background-image: url("/img/i-pin.png");
+  background-image: url("../img/i-pin.png");
 }
 
 /*------------------------------------*\
@@ -1190,7 +1190,7 @@ section:nth-child(even) {
 }
 
 header {
-  background: url("/img/header-bg.png") no-repeat;
+  background: url("../img/header-bg.png") no-repeat;
   background-size: cover;
   color: #fff;
 }
