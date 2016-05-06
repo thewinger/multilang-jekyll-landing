@@ -1,4 +1,6 @@
 .c-contact-info {
+  position: relative;
+  z-index: 1000;
   background-color: $inuit-gray-brand-color; 
   li {
     padding: $inuit-base-spacing-unit--small;

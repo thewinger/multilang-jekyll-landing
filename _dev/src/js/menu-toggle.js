@@ -1,29 +1,17 @@
 // MENU-TOGGLE
-var nav = document.querySelectorAll('.c-navigation nav'); 
+var nav = document.getElementById('js-nav-mobile'); 
 var button = document.getElementById('js-menu-toggle');
-button.classList.add('menu-hide');
+button.classList.add('menu-is-hided');
 button.addEventListener('click', toggleMenu, false);
 //button.addEventListener('touchstart', toggleMenu, false);
 
 function toggleMenu() {
-  if (!containsClass(button, 'menu-hide')) {
-    console.log('se esconde');
-    toggleClass(button,'menu-hide');
-    animate({
-      el: nav,
-      opacity: [1, 0],
-      easing: "easeInOutCubic",
-      begin: hide
-    });
+  if (containsClass(button, 'menu-is-hided')) {
+    toggleClass(button,'menu-is-hided');
+    toggleClass(nav, 'nav-is-displayed');
   } else {
-    console.log('se muestra');
-    toggleClass(button, 'menu-hide');
-    animate({
-      el: nav,
-      opacity: [0, 1],
-      easing: "easeInOutCubic",
-      begin: show
-    });
+    toggleClass(button, 'menu-is-hided');
+    toggleClass(nav, 'nav-is-displayed');
   } 
   function show(elements) {
     elements.forEach(function(el) { el.style.display = "block"; }); 

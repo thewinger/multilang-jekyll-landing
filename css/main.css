@@ -1173,6 +1173,8 @@ header a:hover {
 }
 
 .c-contact-info {
+  position: relative;
+  z-index: 1000;
   background-color: #e9f2f1;
 }
 .c-contact-info li {
@@ -1184,14 +1186,21 @@ header a:hover {
 }
 
 .c-navigation {
-  background-color: #fff;
   text-align: center;
+}
+.c-navigation > .c-navigation__item {
+  background-color: #fff;
+}
+.c-navigation > .c-navigation__item:first-child {
+  position: relative;
+  z-index: 1000;
 }
 
 .logo, .menu-toggle {
   display: inline-block;
   color: #39403e;
   margin-bottom: 0;
+  background-color: #fff;
 }
 
 .menu-toggle {
@@ -1203,8 +1212,27 @@ header a:hover {
   margin: -4px 0 0 4px;
 }
 
+.nav-mobile {
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  will-change: transform;
+  -webkit-transform: translateY(-200px);
+      -ms-transform: translateY(-200px);
+          transform: translateY(-200px);
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
 .js nav {
-  display: none;
+  /*display: none;*/
+}
+
+.nav-is-displayed {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 /*------------------------------------*\

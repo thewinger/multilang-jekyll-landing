@@ -1,11 +1,18 @@
 .c-navigation {
-  background-color: #fff;
   text-align: center;
+  > .c-navigation__item {
+    background-color: #fff;
+    &:first-child {
+      position: relative;
+      z-index: 1000;
+    }
+  }
 }
 .logo, .menu-toggle {
   display: inline-block;
   color: $inuit-base-text-color;
   margin-bottom: 0;
+  background-color: #fff;
 }
 .menu-toggle {
   background: none;
@@ -16,3 +23,11 @@
   }
 }
 
+.nav-mobile {
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  will-change: transform;
+  transform: translateY(-200px);
+  transition: transform 0.5s ease;
+}

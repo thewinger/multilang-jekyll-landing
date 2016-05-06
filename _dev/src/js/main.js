@@ -1,4 +1,3 @@
-//=require vendor/animateplus.min.js
 //=require helpers.js
 document.documentElement.classList.add('js');
 
