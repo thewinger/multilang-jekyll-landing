@@ -6,9 +6,18 @@
 //
 // These can be invoked later on via the `media-query()` mixin found in
 // `_tools.responsive`.
+// For em = 16px
+// palm = <424px
+// palm--large = >425px 
+// lap = 720px < x < 1023px
+// lap-and-up = >720px
+// portable = < 1023px
+// desk = > 1024
+
 
 $breakpoints: (
-    "palm"          "screen and (max-width: 44.9375em)",
+    "palm"          "screen and (max-width: 26.5625em)",
+    "palm--large"   "screen and (min-width: 26.625em)",
     "lap"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
     "lap-and-up"    "screen and (min-width: 45em)",
     "portable"      "screen and (max-width: 63.9375em)",
