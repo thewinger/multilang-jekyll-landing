@@ -5,10 +5,13 @@ lang: es
 ---
 
 <h2>{{ page.title }}</h2>
-<div class="layout">
+<div class="o-layout"><!--
   {% for service in site.data.services[page.lang] %}
-  <div class="c-card layout__item">
-    <h1 class="c-card__title delta">{{ service.title }}</h1>
-    <p class="c-card__body">{{ service.description }}</p>
-  </div>
+  --><div class="o-layout__item u-1/2-lap-and-up">
+    <div class="c-card">
+      <h1 class="c-card__title delta">{{ service.title }}</h1>
+      <p class="c-card__body">{{ service.description }}</p>
+    </div>
+  </div><!--
   {% endfor %}
+--></div>

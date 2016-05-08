@@ -4,7 +4,7 @@
         <li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.telephone }}" class="icon-text"><span class="icon-text__icon i-telephone"></span>{{ site.data.contact-info.telephone }}</a></li><!--
         --><li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.mobile }}" class="icon-text"><span class="icon-text__icon i-mobile"></span>{{ site.data.contact-info.mobile }}</a></li><!--
         --><li class="u-2/3-palm--large u-1/2-palm--huge"><a href="tel:{{ site.data.contact-info.email }}" class="icon-text"><span class="icon-text__icon i-email"></span>{{ site.data.contact-info.email }}</a></li><!--
-        --><li class="u-1/3-palm--large u-1/2-palm--huge">
+        --><li class="u-1/3-palm--large u-1/2-palm--huge c-lang">
           {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
           {% for pagina in pages %}
             {% unless pagina.lang == page.lang %}

@@ -6,10 +6,11 @@
     padding: $inuit-base-spacing-unit--small;
     @include inuit-font-size(14px);
     text-align: center;
-    &:last-child {
-      @include media-query(handheld-and-up) {
-        float: right;
-      }
-    }
+  }
+}    
+.c-lang {
+  @include media-query(handheld-and-up) {
+    float: right;
   }
 }
+

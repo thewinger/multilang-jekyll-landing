@@ -146,6 +146,7 @@ $inuit-enable-btn--large: true;
 $inuit-btn-background: $inuit-brand-color;
 @import "bower_components/inuit-buttons/objects.buttons";
 @import "bower_components/inuit-flag/objects.flag";
+$inuit-enable-layout--auto: true;
 @import "bower_components/inuit-layout/objects.layout";
 @import "bower_components/inuit-list-bare/objects.list-bare";
 @import "bower_components/inuit-list-block/objects.list-block";

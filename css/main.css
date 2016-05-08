@@ -927,6 +927,13 @@ section:nth-child(even) {
   /* [4] */
 }
 
+/**
+ * Cause layout items to take up a non-explicit amount of width.
+ */
+.o-layout--auto > .o-layout__item {
+  width: auto;
+}
+
 /*------------------------------------*\
     #LIST-BARE
 \*------------------------------------*/
@@ -1217,8 +1224,9 @@ header li {
   line-height: 1.71429;
   text-align: center;
 }
+
 @media screen and (min-width: 36.875em) {
-  .c-contact-info li:last-child {
+  .c-lang {
     float: right;
   }
 }
@@ -1242,7 +1250,7 @@ header li {
 }
 
 .logo {
-  text-align: center;
+  text-align: left;
 }
 
 .menu-toggle {
@@ -1754,6 +1762,96 @@ input, textarea {
   }
 
   .u-4\/5-handheld-and-up {
+    width: 80% !important;
+  }
+}
+@media screen and (min-width: 36.875em) and (max-width: 55.5625em) {
+  .u-1\/1-handheld--large {
+    width: 100% !important;
+  }
+
+  .u-1\/2-handheld--large {
+    width: 50% !important;
+  }
+
+  .u-1\/3-handheld--large {
+    width: 33.33333% !important;
+  }
+
+  .u-2\/3-handheld--large {
+    width: 66.66667% !important;
+  }
+
+  .u-1\/4-handheld--large {
+    width: 25% !important;
+  }
+
+  .u-2\/4-handheld--large {
+    width: 50% !important;
+  }
+
+  .u-3\/4-handheld--large {
+    width: 75% !important;
+  }
+
+  .u-1\/5-handheld--large {
+    width: 20% !important;
+  }
+
+  .u-2\/5-handheld--large {
+    width: 40% !important;
+  }
+
+  .u-3\/5-handheld--large {
+    width: 60% !important;
+  }
+
+  .u-4\/5-handheld--large {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 55.5625em) {
+  .u-1\/1-up-to-handheld--large {
+    width: 100% !important;
+  }
+
+  .u-1\/2-up-to-handheld--large {
+    width: 50% !important;
+  }
+
+  .u-1\/3-up-to-handheld--large {
+    width: 33.33333% !important;
+  }
+
+  .u-2\/3-up-to-handheld--large {
+    width: 66.66667% !important;
+  }
+
+  .u-1\/4-up-to-handheld--large {
+    width: 25% !important;
+  }
+
+  .u-2\/4-up-to-handheld--large {
+    width: 50% !important;
+  }
+
+  .u-3\/4-up-to-handheld--large {
+    width: 75% !important;
+  }
+
+  .u-1\/5-up-to-handheld--large {
+    width: 20% !important;
+  }
+
+  .u-2\/5-up-to-handheld--large {
+    width: 40% !important;
+  }
+
+  .u-3\/5-up-to-handheld--large {
+    width: 60% !important;
+  }
+
+  .u-4\/5-up-to-handheld--large {
     width: 80% !important;
   }
 }
