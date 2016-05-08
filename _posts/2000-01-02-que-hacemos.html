@@ -5,8 +5,9 @@ lang: es
 ---
 
 <h2>{{ page.title }}</h2>
+<div class="layout">
   {% for service in site.data.services[page.lang] %}
-  <div class="c-card">
+  <div class="c-card layout__item">
     <h1 class="c-card__title delta">{{ service.title }}</h1>
     <p class="c-card__body">{{ service.description }}</p>
   </div>

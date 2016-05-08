@@ -8,7 +8,7 @@
 // `_tools.responsive`.
 // For em = 16px
 // palm = <424px
-// palm--large = >425px 
+// palm--large = 375px < x < 478px
 // lap = 720px < x < 1023px
 // lap-and-up = >720px
 // portable = < 1023px
@@ -17,7 +17,10 @@
 
 $breakpoints: (
     "palm"          "screen and (max-width: 26.5625em)",
-    "palm--large"   "screen and (min-width: 26.625em)",
+    "palm--large"   "screen and (min-width: 23.4375em) and (max-width: 29.8125em)",
+    "palm--huge"    "screen and (min-width: 29.875em) and (max-width: 36.875em)",
+    "handheld"      "screen and (max-width: 36.875em)",
+    "handheld-and-up" "screen and (min-width: 36.875em)",
     "lap"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
     "lap-and-up"    "screen and (min-width: 45em)",
     "portable"      "screen and (max-width: 63.9375em)",
