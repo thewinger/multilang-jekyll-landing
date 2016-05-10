@@ -719,7 +719,8 @@ section h2 {
   font-size: 1.5rem;
   line-height: 1.2;
 }
-section:nth-child(even) {
+
+main section:nth-child(even) {
   background-color: #e9f2f1;
 }
 
@@ -1111,6 +1112,11 @@ section:nth-child(even) {
   display: block;
 }
 
+.o-wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
 /*------------------------------------*\
     $ICON-TEXT
 \*------------------------------------*/
@@ -1201,11 +1207,17 @@ header {
   background-size: cover;
   color: #fff;
 }
+header .c-header-section {
+  background: #fff;
+}
 header li {
   padding: 12px;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429;
+}
+header > section {
+  background: none;
 }
 
 .en:lang(es), .es:lang(en) {

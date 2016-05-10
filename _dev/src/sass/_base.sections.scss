@@ -3,7 +3,7 @@ section {
   h2 {
     @include inuit-font-size(24px, 1.2);
   }
-  &:nth-child(even) {
-    background-color: $inuit-gray-brand-color;
-  }
+}
+main section:nth-child(even) {
+  background-color: $inuit-gray-brand-color;
 }

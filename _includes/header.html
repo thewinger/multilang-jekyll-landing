@@ -1,34 +1,40 @@
 <header>
-    <div class="c-contact-info">
-      <ul class="list-inline">
-        <li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.telephone }}" class="icon-text"><span class="icon-text__icon i-telephone"></span>{{ site.data.contact-info.telephone }}</a></li><!--
-        --><li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.mobile }}" class="icon-text"><span class="icon-text__icon i-mobile"></span>{{ site.data.contact-info.mobile }}</a></li><!--
-        --><li class="u-2/3-palm--large u-1/2-palm--huge"><a href="tel:{{ site.data.contact-info.email }}" class="icon-text"><span class="icon-text__icon i-email"></span>{{ site.data.contact-info.email }}</a></li><!--
-        --><li class="u-1/3-palm--large u-1/2-palm--huge c-lang">
-          {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
-          {% for pagina in pages %}
-            {% unless pagina.lang == page.lang %}
-            <a href="{{pagina.url}}" class="{{ pagina.lang }} icon-text"><span class="icon-text__icon i-flag"></span>{{ pagina.lang }}</a>
-            {% endunless %}
-          {% endfor %}
-        </li>
-      </ul>
-    </div> <!-- contact-info -->
+  <div class="c-header-section">
+      <div class="c-contact-info">
+        <div class="o-wrapper">
+        <ul class="list-inline">
+          <li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.telephone }}" class="icon-text"><span class="icon-text__icon i-telephone"></span>{{ site.data.contact-info.telephone }}</a></li><!--
+          --><li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.mobile }}" class="icon-text"><span class="icon-text__icon i-mobile"></span>{{ site.data.contact-info.mobile }}</a></li><!--
+          --><li class="u-2/3-palm--large u-1/2-palm--huge"><a href="tel:{{ site.data.contact-info.email }}" class="icon-text"><span class="icon-text__icon i-email"></span>{{ site.data.contact-info.email }}</a></li><!--
+          --><li class="u-1/3-palm--large u-1/2-palm--huge c-lang">
+            {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
+            {% for pagina in pages %}
+              {% unless pagina.lang == page.lang %}
+              <a href="{{pagina.url}}" class="{{ pagina.lang }} icon-text"><span class="icon-text__icon i-flag"></span>{{ pagina.lang }}</a>
+              {% endunless %}
+            {% endfor %}
+          </li>
+        </ul>
+        </div> <!-- wrapper -->
+      </div> <!-- contact-info -->
 
-    <div class="c-navigation">
-      <div class="c-navigation__item">
-        <h1 class="logo u-3/5"><a href="{{ site.url }}/{{ site.index[page.lang] }}"><img src="/img/logo.png"></a></h1><!--
-        --><button id="js-menu-toggle" class="menu-toggle u-2/5 icon-text icon-text--rev menu-is-hided">MENU<span class="icon-text__icon i-menu"></span></button>
-      </div>
-    <nav id="js-nav-mobile" class="c-navigation__item nav-mobile">
-      <ul class="list-ui list-ui--small">
-      {% assign posts=site.posts | where:"lang",page.lang %}
-      {% for post in posts reversed %}
-        <li class="p-{{post.ref}} list-ui__item"><a href="#{{post.filename}}">{{post.title}}</a></li>
-      {% endfor %}
-    </ul></nav>
-    </div> <!-- navigation -->
-    
+      <div class="c-navigation">
+        <div class="o-wrapper">
+        <div class="c-navigation__item">
+          <h1 class="logo u-3/5"><a href="{{ site.url }}/{{ site.index[page.lang] }}"><img src="/img/logo.png"></a></h1><!--
+          --><button id="js-menu-toggle" class="menu-toggle u-2/5 icon-text icon-text--rev menu-is-hided">MENU<span class="icon-text__icon i-menu"></span></button>
+        </div>
+        <nav id="js-nav-mobile" class="c-navigation__item nav-mobile">
+          <ul class="list-ui list-ui--small">
+          {% assign posts=site.posts | where:"lang",page.lang %}
+          {% for post in posts reversed %}
+            <li class="p-{{post.ref}} list-ui__item"><a href="#{{post.filename}}">{{post.title}}</a></li>
+          {% endfor %}
+          </ul>
+        </nav>
+        </div> <!-- wrapper -->
+      </div> <!-- navigation -->
+    </div> <!-- header-section --> 
     {% assign posts=site.posts | where:"lang",page.lang %}
     {% for post in posts %}
       {% if post.title == 'Quienes Somos' or post.title == 'Who We Are' %}
@@ -39,6 +45,5 @@
       </section>
       {% endif %}
     {% endfor %}
-      
 </header>
         

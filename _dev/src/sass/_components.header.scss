@@ -2,9 +2,15 @@ header {
   background: url('../img/header-bg.png') no-repeat;
   background-size: cover;
   color: #fff;
+  .c-header-section {
+    background: #fff;
+  }
   li {
     padding: $inuit-base-spacing-unit--small;
     @include inuit-font-size(14px);
+  }
+  > section {
+    background: none;
   }
 }
 .en:lang(es), .es:lang(en) {
