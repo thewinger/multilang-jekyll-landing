@@ -1,8 +1,25 @@
 .c-navigation {
   text-align: center;
-  > .c-navigation__item {
+  height: 80px;
+  width: 100%;
+  /*transition: height 0.3s ease-out;*/
+  img {
+    height: 80px;
+    transition: height 0.3s ease-out;
+  }
+  &.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.1);
+    img {
+      height: 60px;
+    }
+  }
+  .c-navigation__item {
     background-color: #fff;
-    &:first-child {
+    &.c-nav-header {
       position: relative;
       z-index: 1000;
     }
@@ -30,7 +47,10 @@
   width: 100%;
   position: absolute;
   z-index: 100;
+  box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.1);
   will-change: transform;
   transform: translateY(-200px);
   transition: transform 0.5s ease;
 }
+
+

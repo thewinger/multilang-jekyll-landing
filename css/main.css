@@ -1245,11 +1245,28 @@ header > section {
 
 .c-navigation {
   text-align: center;
+  height: 80px;
+  width: 100%;
+  /*transition: height 0.3s ease-out;*/
 }
-.c-navigation > .c-navigation__item {
+.c-navigation img {
+  height: 80px;
+  transition: height 0.3s ease-out;
+}
+.c-navigation.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.c-navigation.is-sticky img {
+  height: 60px;
+}
+.c-navigation .c-navigation__item {
   background-color: #fff;
 }
-.c-navigation > .c-navigation__item:first-child {
+.c-navigation .c-navigation__item.c-nav-header {
   position: relative;
   z-index: 1000;
 }
@@ -1278,6 +1295,7 @@ header > section {
   width: 100%;
   position: absolute;
   z-index: 100;
+  box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.1);
   will-change: transform;
   -webkit-transform: translateY(-200px);
       -ms-transform: translateY(-200px);
@@ -1289,7 +1307,7 @@ header > section {
 
 .c-card {
   padding: 24px;
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   margin-bottom: 24px;
 }

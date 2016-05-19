@@ -1,6 +1,6 @@
 <header>
   <div class="c-header-section">
-      <div class="c-contact-info">
+      <div id="js-contact" class="c-contact-info">
         <div class="o-wrapper">
         <ul class="list-inline">
           <li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.telephone }}" class="icon-text"><span class="icon-text__icon i-telephone"></span>{{ site.data.contact-info.telephone }}</a></li><!--
@@ -18,9 +18,9 @@
         </div> <!-- wrapper -->
       </div> <!-- contact-info -->
 
-      <div class="c-navigation">
+      <div id="js-navigation" class="c-navigation">
         <div class="o-wrapper">
-        <div class="c-navigation__item">
+        <div class="c-navigation__item c-nav-header">
           <h1 class="logo u-3/5"><a href="{{ site.url }}/{{ site.index[page.lang] }}"><img src="/img/logo.png"></a></h1><!--
           --><button id="js-menu-toggle" class="menu-toggle u-2/5 icon-text icon-text--rev menu-is-hided">MENU<span class="icon-text__icon i-menu"></span></button>
         </div>
