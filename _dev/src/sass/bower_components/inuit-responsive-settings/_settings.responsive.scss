@@ -9,6 +9,11 @@
 // For em = 16px
 // palm = <424px
 // palm--large = 375px < x < 478px
+// palm--huge = 478px < x < 590px
+// handheld = > 590px
+// handheld-and-up = < 590px
+// handheld--large = 590px < x < 889
+// up-to-handheld--large = < 889
 // lap = 720px < x < 1023px
 // lap-and-up = >720px
 // portable = < 1023px
@@ -25,6 +30,7 @@ $breakpoints: (
     "up-to-handheld--large" "screen and (max-width: 55.5625em)",
     "lap"           "screen and (min-width: 45em) and (max-width: 63.9375em)",
     "lap-and-up"    "screen and (min-width: 45em)",
+    "lap-and-up--alt" "screen and (min-width: 45.9375em)",
     "portable"      "screen and (max-width: 63.9375em)",
     "desk"          "screen and (min-width: 64em)",
     "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"

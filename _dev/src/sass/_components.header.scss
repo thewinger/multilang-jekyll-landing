@@ -3,8 +3,7 @@ header {
   background-size: cover;
   color: #fff;
   .c-header-section {
-    background: #fff;
-  }
+      }
   li {
     padding: $inuit-base-spacing-unit--small;
     @include inuit-font-size(14px);

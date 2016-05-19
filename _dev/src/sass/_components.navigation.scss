@@ -1,8 +1,6 @@
 .c-navigation {
   text-align: center;
-  height: 80px;
   width: 100%;
-  /*transition: height 0.3s ease-out;*/
   img {
     height: 80px;
     transition: height 0.3s ease-out;
@@ -11,14 +9,23 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 60px;
     box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.1);
+    background: #fff;
     img {
       height: 60px;
     }
+    a {
+      color: $inuit-base-text-color;
+      &:hover {
+        color: $inuit-brand-color;
+      }
+    }
   }
   .c-navigation__item {
-    background-color: #fff;
+    background: #fff;
+    @include media-query(lap-and-up--alt) {
+      background: none; 
+    }
     &.c-nav-header {
       position: relative;
       z-index: 1000;
@@ -29,7 +36,6 @@
   display: inline-block;
   color: $inuit-base-text-color;
   margin-bottom: 0;
-  background-color: #fff;
 }
 .logo {
   text-align: left;
@@ -43,6 +49,9 @@
   span {
     margin: -4px 0 0 4px;
   }
+  @include media-query(lap-and-up--alt) {
+    display: none;
+  }
 }
 
 .nav-mobile {
@@ -53,6 +62,21 @@
   will-change: transform;
   transform: translateY(-200px);
   transition: transform 0.5s ease;
+  @include media-query(lap-and-up--alt) {
+    display: none;
+  }
 }
 
-
+.nav-desk {
+  display: none;
+  text-align: right;
+  @include media-query(lap-and-up--alt) {
+    display: inline-block;
+  }
+  a {
+    color:  #fff;
+    &:hover {
+      color: $inuit-brand-color;
+    }
+  }
+}
