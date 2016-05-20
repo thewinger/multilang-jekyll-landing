@@ -10,7 +10,6 @@ var contact        = document.getElementById('js-contact'),
 // Method
 function stickyScroll() {
   var scroll_top = document.body.scrollTop;
-  console.log(scroll_top);
   if (scroll_top >= contact_height) {
     addClass(header, fix_class);
     quienes.style.paddingTop= "120px";
