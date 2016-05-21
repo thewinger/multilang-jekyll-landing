@@ -1396,6 +1396,12 @@ input, textarea {
   width: 100%;
   height: 500px;
   background: #e9f2f1;
+  display: none;
+}
+@media screen and (min-width: 64em) {
+  .c-map {
+    display: block;
+  }
 }
 
 footer {
