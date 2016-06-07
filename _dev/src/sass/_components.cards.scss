@@ -1,8 +1,9 @@
 .c-card {
   padding: $inuit-base-spacing-unit;
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.20), 0px 0px 0px 1px rgba(0,0,0,0.08);
   border-radius: 4px;
-  margin-bottom: $inuit-base-spacing-unit;
+  background: #fff;
+  border: 1px solid #DFE0E1;
+  display: inline-block;
   .c-card__title {
     font-weight: 400;
     margin-bottom: $inuit-base-spacing-unit--small;
@@ -10,10 +11,38 @@
   .c-card__body {
     margin-bottom: 0; 
   }
-} 
+  @include media-query(portable) {
+    margin-bottom: $inuit-base-spacing-unit;
+  }
+}
 
-.c-card--borderless {
-  box-shadow: none;
+.c-card--arrowed {
+  position: relative;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      border-collapse: separate;
+      border: $inuit-base-spacing-unit solid transparent;
+      border-left-color: $inuit-brand-color;
+      left: 100%;
+      top: 50%;
+      margin-top: -$inuit-base-spacing-unit;
+    @include media-query(portable) {
+      border-left-color: transparent;
+      border-top-color: $inuit-brand-color;
+      margin-top: 0;
+      top: 100%;
+      left: 50%;
+      margin-left: -$inuit-base-spacing-unit;
+     }
+   }
+}
+
+.c-card--big {
+  min-height: 14 * $inuit-base-spacing-unit;
+  @include media-query(portable) {
+    min-height: initial;
+  }
   .c-card__title {
     &::after {
       content: '';
@@ -22,5 +51,26 @@
       margin-top: $inuit-base-spacing-unit--tiny;
       border: 1px solid $inuit-base-text-color;
     }
+  }
+}
+.c-card--small {
+  border: 1px solid #dfe0e1;
+  min-height: initial;
+  padding: $inuit-base-spacing-unit--small;
+  text-align: center;
+  margin: $inuit-base-spacing-unit--tiny;
+  cursor: default;
+  transition: all 0.2s ease-in;
+  will-change: auto;
+  &:hover {
+    color: $inuit-brand-color;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .c-card__title {
+    margin-bottom: 0;
+  }
+  @include media-query(handheld) {
+    width: 100%;
+    margin: $inuit-base-spacing-unit--tiny 0;
   }
 }

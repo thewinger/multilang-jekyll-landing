@@ -1,3 +1,14 @@
 footer {
   text-align:center;
+  background: $inuit-brand-color;
+  color: #fff;
+}
+.footer-nav {
+  padding: $inuit-base-spacing-unit;
+  li {
+    padding: $inuit-base-spacing-unit--small;
+  }
+  a {
+    color: #fff;
+  }
 }

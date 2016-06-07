@@ -1,0 +1,26 @@
+---
+title: Variedades Vegetales 
+filename: que
+lang: es
+---
+
+<h2>{{ page.title }}</h2>
+<div class="o-layout"><!--
+  {% for service in site.data.project[page.lang] %}
+    {% if forloop.last %}
+      --><div class="o-layout__item u-1/3-desk">
+        <div class="c-card c-card--big">
+          <h1 class="c-card__title delta">{{ service.title }}</h1>
+          <p class="c-card__body">{{ service.description }}</p>
+        </div>
+      </div><!--
+    {% else %}
+      --><div class="o-layout__item u-1/3-desk">
+        <div class="c-card c-card--big c-card--arrowed">
+          <h1 class="c-card__title delta">{{ service.title }}</h1>
+          <p class="c-card__body">{{ service.description }}</p>
+        </div>
+      </div><!--
+    {% endif %}
+  {% endfor %}
+--></div>

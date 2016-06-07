@@ -1,0 +1,14 @@
+---
+title: Derecho Civil y Mercantil
+subtitle: "Servicio multidisciplinar en los ámbitos civil y mercantil. Entre otros:" 
+filename: porque
+lang: es
+---
+
+<h2>{{ page.title }}</h2>
+<h3>{{ page.subtitle }}</h3>
+{% for service in site.data.services[page.lang] %}
+    <div class="c-card c-card--small">
+      <h1 class="c-card__title epsilon">{{ service.title }}</h1>
+    </div>
+{% endfor %}

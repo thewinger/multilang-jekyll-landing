@@ -66,6 +66,55 @@
  *
  * github.com/inuitcss | inuitcss.com
  */
+/**
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ *
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ *
+ * `@include arrow(top, left, red)`
+ *
+ * for just a single, red arrow, or:
+ *
+ * `@include arrow(bottom, center, red, black)`
+ *
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus:
+ *
+   .foo{
+       background-color:#BADA55;
+       border:1px solid #ACE;
+       @include arrow(top, left, #BADA55, #ACE);
+   }
+ *
+ */
+/*------------------------------------*\
+    $ARROWS
+\*------------------------------------*/
+/**
+ * It is a common design treatment to give an element a triangular points-out
+ * arrow, we typically build these with CSS. These following classes allow us to
+ * generate these arbitrarily with a mixin, `@arrow()`.
+ */
+/**
+ * Forms the basis for any/all CSS arrows.
+ */
+/**
+ * Define individual edges so we can combine what we need, when we need.
+ */
 /*------------------------------------*\
     #GENERIC
 \*------------------------------------*/
@@ -712,7 +761,7 @@ html {
 }
 
 section {
-  padding: 60px 12px;
+  padding: 96px 12px;
 }
 section h2 {
   font-size: 24px;
@@ -1193,6 +1242,11 @@ main section:nth-child(even) {
   background-image: url("../img/i-pin.svg"), linear-gradient(transparent, transparent);
 }
 
+.i-skype {
+  background-image: url("../img/i-skype.png");
+  background-image: url("../img/i-skype.svg"), linear-gradient(transparent, transparent);
+}
+
 /*------------------------------------*\
     #COMPONENTS
 \*------------------------------------*/
@@ -1254,10 +1308,15 @@ header > section {
 .c-navigation {
   text-align: center;
   width: 100%;
+  background: #fff;
 }
 .c-navigation img {
-  height: 80px;
   transition: height 0.3s ease-out;
+}
+.c-navigation span {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .c-navigation.is-sticky {
   position: fixed;
@@ -1265,9 +1324,7 @@ header > section {
   left: 0;
   box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.1);
   background: #fff;
-}
-.c-navigation.is-sticky img {
-  height: 60px;
+  z-index: 10;
 }
 .c-navigation.is-sticky a {
   color: #39403e;
@@ -1278,7 +1335,7 @@ header > section {
 .c-navigation .c-navigation__item {
   background: #fff;
 }
-@media screen and (min-width: 45.9375em) {
+@media screen and (min-width: 46.375em) {
   .c-navigation .c-navigation__item {
     background: none;
   }
@@ -1296,6 +1353,7 @@ header > section {
 
 .logo {
   text-align: left;
+  padding-left: 12px;
 }
 
 .menu-toggle {
@@ -1308,7 +1366,7 @@ header > section {
 .menu-toggle span {
   margin: -4px 0 0 4px;
 }
-@media screen and (min-width: 45.9375em) {
+@media screen and (min-width: 46.375em) {
   .menu-toggle {
     display: none;
   }
@@ -1327,7 +1385,7 @@ header > section {
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
-@media screen and (min-width: 45.9375em) {
+@media screen and (min-width: 46.375em) {
   .nav-mobile {
     display: none;
   }
@@ -1337,13 +1395,13 @@ header > section {
   display: none;
   text-align: right;
 }
-@media screen and (min-width: 45.9375em) {
+@media screen and (min-width: 46.375em) {
   .nav-desk {
     display: inline-block;
   }
 }
 .nav-desk a {
-  color: #fff;
+  color: #000;
 }
 .nav-desk a:hover {
   color: #16A085;
@@ -1351,9 +1409,10 @@ header > section {
 
 .c-card {
   padding: 24px;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
-  margin-bottom: 24px;
+  background: #fff;
+  border: 1px solid #DFE0E1;
+  display: inline-block;
 }
 .c-card .c-card__title {
   font-weight: 400;
@@ -1362,16 +1421,74 @@ header > section {
 .c-card .c-card__body {
   margin-bottom: 0;
 }
-
-.c-card--borderless {
-  box-shadow: none;
+@media screen and (max-width: 63.9375em) {
+  .c-card {
+    margin-bottom: 24px;
+  }
 }
-.c-card--borderless .c-card__title::after {
+
+.c-card--arrowed {
+  position: relative;
+}
+.c-card--arrowed::before, .c-card--arrowed::after {
+  content: "";
+  position: absolute;
+  border-collapse: separate;
+  border: 24px solid transparent;
+  border-left-color: #16A085;
+  left: 100%;
+  top: 50%;
+  margin-top: -24px;
+}
+@media screen and (max-width: 63.9375em) {
+  .c-card--arrowed::before, .c-card--arrowed::after {
+    border-left-color: transparent;
+    border-top-color: #16A085;
+    margin-top: 0;
+    top: 100%;
+    left: 50%;
+    margin-left: -24px;
+  }
+}
+
+.c-card--big {
+  min-height: 336px;
+}
+@media screen and (max-width: 63.9375em) {
+  .c-card--big {
+    min-height: initial;
+  }
+}
+.c-card--big .c-card__title::after {
   content: '';
   display: block;
   width: 24px;
   margin-top: 6px;
   border: 1px solid #39403e;
+}
+
+.c-card--small {
+  border: 1px solid #dfe0e1;
+  min-height: initial;
+  padding: 12px;
+  text-align: center;
+  margin: 6px;
+  cursor: default;
+  transition: all 0.2s ease-in;
+  will-change: auto;
+}
+.c-card--small:hover {
+  color: #16A085;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.c-card--small .c-card__title {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 36.875em) {
+  .c-card--small {
+    width: 100%;
+    margin: 6px 0;
+  }
 }
 
 label, input, textarea {
@@ -1406,6 +1523,18 @@ input, textarea {
 
 footer {
   text-align: center;
+  background: #16A085;
+  color: #fff;
+}
+
+.footer-nav {
+  padding: 24px;
+}
+.footer-nav li {
+  padding: 12px;
+}
+.footer-nav a {
+  color: #fff;
 }
 
 .js nav {
@@ -2035,7 +2164,7 @@ footer {
     width: 80% !important;
   }
 }
-@media screen and (min-width: 45.9375em) {
+@media screen and (min-width: 46.375em) {
   .u-1\/1-lap-and-up--alt {
     width: 100% !important;
   }
