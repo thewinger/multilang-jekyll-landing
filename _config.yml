@@ -1,7 +1,7 @@
 # Site settings
 title: AMontero Abogados
 email: info@amonteroabogados.com
-baseurl: "/"
+baseurl: "../"
 #url: "http://localhost:3000"
 exclude: ["_dev",
          ".git",

@@ -110,7 +110,7 @@ function initMap() {
                 size: new google.maps.Size(150,50)
           });
   
-          var image = '/img/i-map.png';
+          var image = '../img/i-map.png';
           var marker = new google.maps.Marker({
               position: results[0].geometry.location,
               map: map, 
