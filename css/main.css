@@ -1482,6 +1482,7 @@ header > section {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 .c-card--small .c-card__title {
+  font-family: 'Open Sans', sans-serif;
   margin-bottom: 0;
 }
 @media screen and (max-width: 36.875em) {
