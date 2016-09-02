@@ -61,11 +61,12 @@
 .nav-mobile {
   width: 100%;
   position: absolute;
+  top: 105px;
   z-index: 100;
-  box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 9px 0px rgba(0,0,0,0.1);
   will-change: transform;
-  transform: translateY(-200px);
-  transition: transform 0.5s ease;
+  transform: translateX(100%);
+  transition: all  0.5s ease;
   @include media-query(lap-and-up--alt) {
     display: none;
   }

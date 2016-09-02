@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>flag/gb</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="16" rx="2"></rect>
+        <rect id="path-3" x="0" y="0" width="24" height="16" rx="2"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="24" height="16" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header-section/despacho" transform="translate(-1248.000000, -64.000000)">
+            <g id="header-section">
+                <g id="menu-block" transform="translate(0.000000, 24.000000)">
+                    <g id="lang-block" transform="translate(1212.000000, 40.000000)">
+                        <g id="flag/gb" transform="translate(36.000000, 0.000000)">
+                            <g>
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="background" fill="#22438B" xlink:href="#path-1"></use>
+                                <path d="M1,1 L23,15" id="Path-71" stroke="#FFFFFF" stroke-width="3" mask="url(#mask-2)"></path>
+                                <path d="M1,1 L23,15" id="Path-71" stroke="#FFFFFF" stroke-width="3" mask="url(#mask-2)" transform="translate(12.000000, 8.000000) scale(-1, 1) translate(-12.000000, -8.000000) "></path>
+                                <path d="M1,1 L23,15" id="Path-71" stroke="#C7152A" stroke-width="2" mask="url(#mask-2)"></path>
+                                <path d="M1,1 L23,15" id="Path-71" stroke="#C7152A" stroke-width="2" mask="url(#mask-2)" transform="translate(12.000000, 8.000000) scale(-1, 1) translate(-12.000000, -8.000000) "></path>
+                                <path d="M12,1 L12,15" id="Path-72" stroke="#FFFFFF" stroke-width="3" mask="url(#mask-2)"></path>
+                                <path d="M1,8 L23,8" id="Path-73" stroke="#FFFFFF" stroke-width="3" mask="url(#mask-2)"></path>
+                                <path d="M12,1 L12,15" id="Path-72" stroke="#C7152A" stroke-width="2" mask="url(#mask-2)"></path>
+                                <path d="M1,8 L23,8" id="Path-73" stroke="#C7152A" stroke-width="2" mask="url(#mask-2)"></path>
+                                <g id="background" mask="url(#mask-2)" stroke-width="2" stroke="#1E3C7C">
+                                    <use mask="url(#mask-4)" xlink:href="#path-3"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

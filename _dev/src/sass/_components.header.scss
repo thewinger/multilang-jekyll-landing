@@ -1,7 +1,5 @@
 header {
-  background: url('../img/header-bg.png') no-repeat;
-  background-size: cover;
-  color: #fff;
+ color: #fff;
   .c-header-section {
       }
   li {
@@ -12,7 +10,9 @@ header {
     background: none;
   }
 }
-.en:lang(es), .es:lang(en) {
-  text-transform: uppercase;
-}
 
+.c-header-section {
+  border-top: $inuit-base-spacing-unit solid #E9F2F1;
+  border-bottom: 2px solid #F3005C;
+  padding: $inuit-base-spacing-unit--tiny 0;
+}

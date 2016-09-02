@@ -1,24 +1,6 @@
 <header>
   <div class="c-header-section">
-      <div id="js-contact" class="c-contact-info">
-        <div class="o-wrapper">
-        <ul class="list-inline">
-          <li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.telephone }}" class="icon-text"><span class="icon-text__icon i-telephone"></span>{{ site.data.contact-info.telephone }}</a></li><!--
-          --><li class="u-1/2-handheld"><a href="tel:{{ site.data.contact-info.mobile }}" class="icon-text"><span class="icon-text__icon i-mobile"></span>{{ site.data.contact-info.mobile }}</a></li><!--
-          --><li class="u-1/1-handheld u-2/3-palm--large u-1/2-palm--huge"><a href="tel:{{ site.data.contact-info.email }}" class="icon-text"><span class="icon-text__icon i-email"></span>{{ site.data.contact-info.email }}</a></li><!--
-          <li class="u-1/3-palm--large u-1/2-palm--huge c-lang">
-            {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
-            {% for pagina in pages %}
-              {% unless pagina.lang == page.lang %}
-              <a href="{{pagina.url}}" class="{{ pagina.lang }} icon-text"><span class="icon-text__icon i-flag"></span>{{ pagina.lang }}</a>
-              {% endunless %}
-            {% endfor %}
-          </li>-->
-        </ul>
-        </div> <!-- wrapper -->
-      </div> <!-- contact-info -->
-
-      <div id="js-navigation" class="c-navigation">
+     <div id="js-navigation" class="c-navigation">
         <div class="o-wrapper">
         <div class="c-navigation__item c-nav-header">
           <h1 class="logo u-3/5 u-1/4-lap-and-up--alt"><a href="{{ site.url }}/{{ site.index[page.lang] }}"><img src="../img/logo.png" alt="AMontero Abogados" title="AMontero Abogados"></a></h1><!--
@@ -38,20 +20,16 @@
           {% for post in posts reversed %}
             <li class="p-{{post.ref}} list-ui__item"><a href="#{{post.filename}}">{{post.title}}</a></li>
           {% endfor %}
+            <li class="list-ui__item  c-lang">
+              {% assign pages=site.pages | where:"ref",page.ref | sort:'lang' %}
+              {% for pagina in pages %}
+                <a href="{{pagina.url}}" class="{{ pagina.lang }} icon-text"><span class="icon-text__icon i-flag--{{ pagina.lang }}"></span></a>
+              {% endfor %}
+            </li> 
           </ul>
         </nav>
         </div> <!-- wrapper -->
       </div> <!-- navigation -->
     </div> <!-- header-section --> 
-    {% assign posts=site.posts | where:"lang",page.lang %}
-    {% for post in posts %}
-      {% if post.title == 'El Despacho' or post.title == 'Who We Are' %}
-      <section id="{{post.filename}}">
-        <div class="o-wrapper">
-          {{ post.content }}
-        </div>
-      </section>
-      {% endif %}
-    {% endfor %}
 </header>
         

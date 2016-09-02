@@ -1,8 +1,6 @@
 // MENU STICKY
 // Variables
-var contact        = document.getElementById('js-contact'),
-    contact_height = contact.offsetHeight, 
-    header         = document.getElementById('js-navigation'),
+var header         = document.getElementById('js-navigation'),
     header_height  = header.offsetHeight,
     fix_class      = 'is-sticky',
     quienes        = document.getElementById('quienes'); 
